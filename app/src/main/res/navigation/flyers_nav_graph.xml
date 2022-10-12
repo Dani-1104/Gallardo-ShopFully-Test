@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flyers_nav_graph"
+    app:startDestination="@id/navigation_main">
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="com.example.gallardoshopfullytest.ui.flyerlist.FlyerListFragment">
+        <action
+            android:id="@+id/navigate_from_flyer_list_to_detail"
+            app:destination="@id/navigation_flyer_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_flyer_detail"
+        android:name="com.example.gallardoshopfullytest.ui.flyerdetail.FlyerDetailFragment">
+        <argument
+            android:name="flyerTitle"
+            app:argType="string" />
+        <argument
+            android:name="flyerId"
+            app:argType="string" />
+        <argument
+            android:name="isFirstRead"
+            app:argType="boolean" />
+    </fragment>
+
+</navigation>
